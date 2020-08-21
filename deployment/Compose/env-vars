@@ -5,11 +5,11 @@ PING_IDENTITY_PASSWORD="2FederateM0re"
 #
 PF_LOG_LEVEL=DEBUG
 PF_USER_PWD=2FederateM0re
-PF_ADMIN_HOSTNAME=pingfederate-{{your eks namespace}}.ping-devops.com
+PF_ADMIN_HOSTNAME=poc-hines.ping-eng.com
 PF_ADMIN_PORT="443"
 PF_ADMIN_MODE="OIDC"
 # Used by PD DelAdmin Template
-PF_BASE_URL={{your PF BaseURL}}
+PF_BASE_URL=https://poc-hines.ping-eng.com:9022
 #
 # PD User Base DN
 #
@@ -29,13 +29,13 @@ PING_CENTRAL_LOG_LEVEL=DEBUG
 # Admin Console OIDC
 #
 # P14C \ Compass
-ADMIN_CLIENT_ID={{your OIDC Client ID}}
-ADMIN_CLIENT_SECRET={{your OIDC Client Secret}}
-ADMIN_CLIENT_ISSUER={{your OIDC Client Issuer}}
+ADMIN_CLIENT_ID=b3002a3b-cd55-4f8c-8890-b8202e520bd9
+ADMIN_CLIENT_SECRET=I-zmKd0.~UbvfC9LQvQNr5J-6e-dMIgCUEExaOhNqHPpNISoGavptNt3j9v2Zwf0
+ADMIN_CLIENT_ISSUER=https://sso.anycompanyonline.net/as/
 #
 # PF OIDC doesn't use .well-known to configure...
 #
-ADMIN_CLIENT_AUTHZ={{your OIDC AuthZ Endpoint}}
-ADMIN_CLIENT_TOKEN={{your OIDC Token Endpoint}}
-ADMIN_CLIENT_USERINFO={{your OIDC UserInfo Endpoint}}
-ADMIN_CLIENT_LOGOFF={{your OIDC Logoff Endpoint}}
+ADMIN_CLIENT_AUTHZ=https://sso.anycompanyonline.net/as/authorize
+ADMIN_CLIENT_TOKEN=https://sso.anycompanyonline.net/as/token
+ADMIN_CLIENT_USERINFO=https://sso.anycompanyonline.net/as/userinfo
+ADMIN_CLIENT_LOGOFF=https://sso.anycompanyonline.net/as/signoff
