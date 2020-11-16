@@ -8,7 +8,7 @@ metadata:
   name: pingaccess-ingress
 spec:
   rules:
-  - host: {{your PA virtual host}}
+  - host: poc-hines.ping-eng.com
     http:
       paths:
       - path: /.well-known/acme-challenge/
@@ -33,56 +33,56 @@ spec:
   # Use the AWS Route53 FQDNs to access the Admin Consoles
   rules:
   # This rule gives external access to the PingAccess Admin Console
-  - host: pingaccess-{{your eks namespace}}.ping-devops.com
+  - host: pingaccess-hines.ping-devops.com
     http:
       paths:
        - backend:
            serviceName: pingaccess
            servicePort: 9000
   # This rule gives external access to the PingFederate Admin Console
-  - host: pingfederate-{{your eks namespace}}.ping-devops.com
+  - host: pingfederate-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingfederate
           servicePort: 443
   # This rule gives external access to the PingData Admin Console
-  - host: pingdataconsole-{{your eks namespace}}.ping-devops.com
+  - host: pingdataconsole-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingdataconsole
           servicePort: 8443
   # This rule gives external access to the PingDataGovernance-PAP Admin Console
-  - host: pingdatagov-pap-{{your eks namespace}}.ping-devops.com
+  - host: pingdatagov-pap-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingdatagov-pap
           servicePort: 443
   # This rule gives external access to the PingCentral Admin Console
-  - host: pingcentral-{{your eks namespace}}.ping-devops.com
+  - host: pingcentral-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingcentral
           servicePort: 9022
   # This rule gives external access to the PingDirectory ConfigAPI
-  - host: pingdirectory-{{your eks namespace}}.ping-devops.com
+  - host: pingdirectory-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingdirectory
           servicePort: 443
   # This rule gives external access to the PingDataGov ConfigAPI
-  - host: pingdatagov-{{your eks namespace}}.ping-devops.com
+  - host: pingdatagov-hines.ping-devops.com
     http:
       paths:
        - backend:
           serviceName: pingdatagov
           servicePort: 443
   # This rule gives external access to the PingDataGov-PAP Console
-  - host: pingdatagov-pap-{{your eks namespace}}.ping-devops.com
+  - host: pingdatagov-pap-hines.ping-devops.com
     http:
       paths:
        - backend:
