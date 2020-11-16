@@ -11,7 +11,7 @@ data:
   PF_ADMIN_PORT: "443"
   PF_ADMIN_MODE: "OIDC"
   # Used by PD DelAdmin Template
-  PF_BASE_URL: {{your PF BaseURL}}
+  PF_BASE_URL: "https://poc-hines.ping-eng.com"
   #
   # PD User Base DN
   #
@@ -31,16 +31,16 @@ data:
   # Admin Console OIDC
   #
   # P14C \ Compass
-  ADMIN_CLIENT_ID: {{your OIDC Client ID}}
-  ADMIN_CLIENT_SECRET: {{your OIDC Client Secret}}
-  ADMIN_CLIENT_ISSUER: {{your OIDC Client Issuer}}
+  ADMIN_CLIENT_ID: "dc44d980-41f6-4c02-a2ed-ec162c431a9e"
+  ADMIN_CLIENT_SECRET: "zU.J9NtSwW80SckIRIxVOzEzH7GELCzqtn.Ibpsn9yw6N24u8H-jm85DG7NSjx7q"
+  ADMIN_CLIENT_ISSUER: "https://sso.anycompanyonline.net/as/"
   #
   # PF OIDC doesn't use .well-known to configure...
   #
-  ADMIN_CLIENT_AUTHZ: {{your OIDC AuthZ Endpoint}}
-  ADMIN_CLIENT_TOKEN: {{your OIDC Token Endpoint}}
-  ADMIN_CLIENT_USERINFO: {{your OIDC UserInfo Endpoint}}
-  ADMIN_CLIENT_LOGOFF: {{your OIDC Logoff Endpoint}}
+  ADMIN_CLIENT_AUTHZ: "https://sso.anycompanyonline.net/as/authorize"
+  ADMIN_CLIENT_TOKEN: "https://sso.anycompanyonline.net/as/token"
+  ADMIN_CLIENT_USERINFO: "https://sso.anycompanyonline.net/as/userinfo"
+  ADMIN_CLIENT_LOGOFF: "https://sso.anycompanyonline.net/as/signoff"
 kind: ConfigMap
 metadata:
   creationTimestamp: null
@@ -57,22 +57,22 @@ data:
         "values": [
             {
                 "key": "pfBaseURL",
-                "value": "{{your PF BaseURL}}",
+                "value": "poc-hines.ping-eng.com",
                 "enabled": true
             },
             {
                 "key": "pingIdSdk",
-                "value": "#Auto-Generated from PingOne, downloaded by id=[000000] email=[bogus@pingidentity.com]\n#Thu Jan 09 11:17:59 MST 2020\napi_key=YourAPIKey\ntoken=YourToken\npingidsdk_url=https://sdk.pingid.com/pingid\naccount_id=YourAccountID",
+                "value": "#Auto-Generated from PingOne, downloaded by id=[929572] email=[patrickhines+365@pingidentity.com]\n#Thu Apr 09 18:42:03 MDT 2020\napi_key=ZmNiMTg1OWUtODBjZi00YTA2LTg4ZTItNGMxZjEwZTBmMjJl\ntoken=4321628f23af4bdfa1d0eb0a5db2d13f\npingidsdk_url=https://sdk.pingid.com/pingid\naccount_id=1454018c-4903-4291-a52b-68de8cce2aac,
                 "enabled": true
             },
             {
                 "key": "sdkAppId",
-                "value": "{{your PID SDK AppID}}",
+                "value": "e0f38195-8f32-4ba9-b59b-03dcab1b791e",
                 "enabled": true
             },
     	    {
     	        "key": "paVirtualHost",
-    	        "value": "{{your PA Virtual Host}}",
+    	        "value": "poc-hines.ping-eng.com",
     	        "enabled": true
     	    },
             {
